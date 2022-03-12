@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E5A955E0-569F-4DB3-8E52-8E63143864F7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>iban</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\20\5\202110\17\新建文件夹\模块-滑动图片人机验证\SlidingCaptcha\CaptchaDemo\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AscxModular\Footer.ascx" />
+    <Content Include="css\quiz.min.css" />
+    <Content Include="js\datetimepicker-master\build\jquery.datetimepicker.full.js" />
+    <Content Include="js\datetimepicker-master\build\jquery.datetimepicker.full.min.js" />
+    <Content Include="js\datetimepicker-master\build\jquery.datetimepicker.min.css" />
+    <Content Include="js\datetimepicker-master\build\jquery.datetimepicker.min.js" />
+    <Content Include="js\datetimepicker-master\index.html" />
+    <Content Include="js\datetimepicker-master\jquery.datetimepicker.css" />
+    <Content Include="js\datetimepicker-master\jquery.datetimepicker.js" />
+    <Content Include="js\datetimepicker-master\jquery.js" />
+    <Content Include="js\datetimepicker-master\karma.conf.js" />
+    <Content Include="js\datetimepicker-master\MIT-LICENSE.txt" />
+    <Content Include="js\datetimepicker-master\screen\1.png" />
+    <Content Include="js\datetimepicker-master\screen\2.png" />
+    <Content Include="js\datetimepicker-master\screen\3.1.png" />
+    <Content Include="js\datetimepicker-master\screen\3.png" />
+    <Content Include="js\datetimepicker-master\screen\4.png" />
+    <Content Include="js\datetimepicker-master\screen\5.png" />
+    <Content Include="js\datetimepicker-master\screen\6.png" />
+    <Content Include="js\datetimepicker-master\tests\app.css" />
+    <Content Include="js\datetimepicker-master\tests\index.html" />
+    <Content Include="js\datetimepicker-master\tests\input_in_container_fixed_to_bottom_of_viewport.html" />
+    <Content Include="js\datetimepicker-master\tests\input_in_container_fixed_to_top_of_viewport.html" />
+    <Content Include="js\datetimepicker-master\tests\tests\bootstrap.js" />
+    <Content Include="js\datetimepicker-master\tests\tests\destroy.js" />
+    <Content Include="js\datetimepicker-master\tests\tests\events.js" />
+    <Content Include="js\datetimepicker-master\tests\tests\init.js" />
+    <Content Include="js\datetimepicker-master\tests\tests\methods.js" />
+    <Content Include="js\datetimepicker-master\tests\tests\options.js" />
+    <Content Include="TaskModular\Kindeditor\kindeditor-all-min.js" />
+    <Content Include="TaskModular\Kindeditor\kindeditor-all.js" />
+    <Content Include="TaskModular\Kindeditor\kindeditor-min.js" />
+    <Content Include="TaskModular\Kindeditor\kindeditor.js" />
+    <Content Include="TaskModular\Kindeditor\lang\ar.js" />
+    <Content Include="TaskModular\Kindeditor\lang\en.js" />
+    <Content Include="TaskModular\Kindeditor\lang\ko.js" />
+    <Content Include="TaskModular\Kindeditor\lang\zh_CN.js" />
+    <Content Include="TaskModular\Kindeditor\lang\zh_TW.js" />
+    <Content Include="TaskModular\Kindeditor\Picture.css" />
+    <Content Include="TaskModular\Kindeditor\plugins\anchor\anchor.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\autoheight\autoheight.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\baidumap\baidumap.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\baidumap\index.html" />
+    <Content Include="TaskModular\Kindeditor\plugins\baidumap\map.html" />
+    <Content Include="TaskModular\Kindeditor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\code\code.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\code\prettify.css" />
+    <Content Include="TaskModular\Kindeditor\plugins\code\prettify.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\emoticons.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\0.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\1.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\10.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\100.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\101.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\102.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\103.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\104.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\105.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\106.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\107.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\108.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\109.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\11.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\110.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\111.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\112.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\113.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\114.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\115.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\116.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\117.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\118.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\119.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\12.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\120.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\121.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\122.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\123.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\124.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\125.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\126.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\127.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\128.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\129.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\13.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\130.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\131.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\132.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\133.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\134.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\14.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\15.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\16.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\17.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\18.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\19.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\2.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\20.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\21.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\22.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\23.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\24.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\25.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\26.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\27.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\28.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\29.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\3.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\30.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\31.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\32.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\33.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\34.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\35.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\36.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\37.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\38.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\39.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\4.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\40.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\41.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\42.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\43.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\44.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\45.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\46.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\47.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\48.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\49.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\5.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\50.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\51.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\52.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\53.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\54.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\55.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\56.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\57.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\58.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\59.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\6.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\60.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\61.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\62.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\63.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\64.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\65.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\66.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\67.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\68.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\69.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\7.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\70.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\71.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\72.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\73.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\74.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\75.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\76.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\77.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\78.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\79.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\8.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\80.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\81.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\82.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\83.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\84.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\85.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\86.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\87.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\88.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\89.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\9.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\90.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\91.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\92.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\93.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\94.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\95.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\96.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\97.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\98.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\99.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\emoticons\images\static.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\filemanager\filemanager.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\filemanager\images\file-16.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\filemanager\images\file-64.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\filemanager\images\go-up.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\flash\flash.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\image\image.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\image\images\align_left.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\image\images\align_right.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\image\images\align_top.gif" />
+    <Content Include="TaskModular\Kindeditor\plugins\image\images\refresh.png" />
+    <Content Include="TaskModular\Kindeditor\plugins\insertfile\insertfile.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\lineheight\lineheight.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\link\link.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\map\map.html" />
+    <Content Include="TaskModular\Kindeditor\plugins\map\map.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\media\media.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\multiimage\images\image.png" />
+    <Content Include="TaskModular\Kindeditor\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="TaskModular\Kindeditor\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="TaskModular\Kindeditor\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="TaskModular\Kindeditor\plugins\multiimage\multiimage.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\preview\preview.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\quickformat\quickformat.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\table\table.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\template\html\1.html" />
+    <Content Include="TaskModular\Kindeditor\plugins\template\html\2.html" />
+    <Content Include="TaskModular\Kindeditor\plugins\template\html\3.html" />
+    <Content Include="TaskModular\Kindeditor\plugins\template\template.js" />
+    <Content Include="TaskModular\Kindeditor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="TaskModular\Kindeditor\themes\common\anchor.gif" />
+    <Content Include="TaskModular\Kindeditor\themes\common\blank.gif" />
+    <Content Include="TaskModular\Kindeditor\themes\common\flash.gif" />
+    <Content Include="TaskModular\Kindeditor\themes\common\loading.gif" />
+    <Content Include="TaskModular\Kindeditor\themes\common\media.gif" />
+    <Content Include="TaskModular\Kindeditor\themes\common\rm.gif" />
+    <Content Include="TaskModular\Kindeditor\themes\default\background.png" />
+    <Content Include="TaskModular\Kindeditor\themes\default\default.css" />
+    <Content Include="TaskModular\Kindeditor\themes\default\default.png" />
+    <Content Include="TaskModular\Kindeditor\themes\qq\editor.gif" />
+    <Content Include="TaskModular\Kindeditor\themes\qq\qq.css" />
+    <Content Include="TaskModular\Kindeditor\themes\simple\simple.css" />
+    <Content Include="TaskModular\TaskRead.aspx" />
+    <Content Include="TaskModular\TaskChange.aspx" />
+    <Content Include="WebControlModular\CalendarManage.aspx" />
+    <Content Include="WebControlModular\CarouselManage.aspx" />
+    <Content Include="CommentModular\CommentDelete.aspx" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrapValidator.css" />
+    <Content Include="css\bootstrapValidator.min.css" />
+    <Content Include="css\Color.css" />
+    <Content Include="css\fileinput.min.css" />
+    <Content Include="css\index.css" />
+    <Content Include="css\login.min.css" />
+    <Content Include="css\notice.css" />
+    <Content Include="css\register.min.css" />
+    <Content Include="css\default.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="images\eight_logo.png" />
+    <Content Include="images\img_login_bg.jpg" />
+    <Content Include="images\yunhe_logo.ico" />
+    <Content Include="images\yunhe_logo.png" />
+    <Content Include="index.aspx" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\bootstrapValidator.js" />
+    <Content Include="js\bootstrapValidator.min.js" />
+    <Content Include="js\china.js" />
+    <Content Include="js\echarts.js" />
+    <Content Include="js\echarts.min.js" />
+    <Content Include="js\fileinput\fileinput.min.js" />
+    <Content Include="js\fileinput\theme.js" />
+    <Content Include="js\fileinput\zh.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="NoticeModular\Kindeditor\kindeditor-all-min.js" />
+    <Content Include="NoticeModular\Kindeditor\kindeditor-all.js" />
+    <Content Include="NoticeModular\Kindeditor\kindeditor-min.js" />
+    <Content Include="NoticeModular\Kindeditor\kindeditor.js" />
+    <Content Include="NoticeModular\Kindeditor\lang\ar.js" />
+    <Content Include="NoticeModular\Kindeditor\lang\en.js" />
+    <Content Include="NoticeModular\Kindeditor\lang\ko.js" />
+    <Content Include="NoticeModular\Kindeditor\lang\zh_CN.js" />
+    <Content Include="NoticeModular\Kindeditor\lang\zh_TW.js" />
+    <Content Include="NoticeModular\Kindeditor\Picture.css" />
+    <Content Include="NoticeModular\Kindeditor\plugins\anchor\anchor.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\autoheight\autoheight.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\baidumap\baidumap.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\baidumap\index.html" />
+    <Content Include="NoticeModular\Kindeditor\plugins\baidumap\map.html" />
+    <Content Include="NoticeModular\Kindeditor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\code\code.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\code\prettify.css" />
+    <Content Include="NoticeModular\Kindeditor\plugins\code\prettify.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\emoticons.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\0.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\1.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\10.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\100.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\101.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\102.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\103.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\104.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\105.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\106.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\107.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\108.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\109.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\11.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\110.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\111.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\112.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\113.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\114.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\115.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\116.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\117.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\118.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\119.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\12.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\120.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\121.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\122.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\123.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\124.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\125.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\126.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\127.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\128.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\129.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\13.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\130.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\131.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\132.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\133.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\134.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\14.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\15.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\16.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\17.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\18.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\19.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\2.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\20.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\21.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\22.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\23.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\24.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\25.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\26.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\27.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\28.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\29.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\3.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\30.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\31.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\32.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\33.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\34.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\35.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\36.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\37.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\38.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\39.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\4.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\40.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\41.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\42.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\43.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\44.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\45.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\46.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\47.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\48.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\49.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\5.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\50.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\51.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\52.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\53.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\54.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\55.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\56.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\57.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\58.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\59.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\6.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\60.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\61.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\62.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\63.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\64.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\65.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\66.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\67.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\68.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\69.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\7.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\70.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\71.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\72.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\73.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\74.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\75.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\76.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\77.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\78.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\79.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\8.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\80.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\81.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\82.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\83.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\84.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\85.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\86.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\87.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\88.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\89.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\9.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\90.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\91.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\92.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\93.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\94.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\95.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\96.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\97.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\98.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\99.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\emoticons\images\static.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\filemanager\filemanager.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\filemanager\images\file-16.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\filemanager\images\file-64.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\filemanager\images\go-up.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\flash\flash.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\image\image.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\image\images\align_left.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\image\images\align_right.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\image\images\align_top.gif" />
+    <Content Include="NoticeModular\Kindeditor\plugins\image\images\refresh.png" />
+    <Content Include="NoticeModular\Kindeditor\plugins\insertfile\insertfile.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\lineheight\lineheight.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\link\link.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\map\map.html" />
+    <Content Include="NoticeModular\Kindeditor\plugins\map\map.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\media\media.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\multiimage\images\image.png" />
+    <Content Include="NoticeModular\Kindeditor\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="NoticeModular\Kindeditor\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="NoticeModular\Kindeditor\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="NoticeModular\Kindeditor\plugins\multiimage\multiimage.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\preview\preview.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\quickformat\quickformat.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\table\table.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\template\html\1.html" />
+    <Content Include="NoticeModular\Kindeditor\plugins\template\html\2.html" />
+    <Content Include="NoticeModular\Kindeditor\plugins\template\html\3.html" />
+    <Content Include="NoticeModular\Kindeditor\plugins\template\template.js" />
+    <Content Include="NoticeModular\Kindeditor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="NoticeModular\Kindeditor\themes\common\anchor.gif" />
+    <Content Include="NoticeModular\Kindeditor\themes\common\blank.gif" />
+    <Content Include="NoticeModular\Kindeditor\themes\common\flash.gif" />
+    <Content Include="NoticeModular\Kindeditor\themes\common\loading.gif" />
+    <Content Include="NoticeModular\Kindeditor\themes\common\media.gif" />
+    <Content Include="NoticeModular\Kindeditor\themes\common\rm.gif" />
+    <Content Include="NoticeModular\Kindeditor\themes\default\background.png" />
+    <Content Include="NoticeModular\Kindeditor\themes\default\default.css" />
+    <Content Include="NoticeModular\Kindeditor\themes\default\default.png" />
+    <Content Include="NoticeModular\Kindeditor\themes\qq\editor.gif" />
+    <Content Include="NoticeModular\Kindeditor\themes\qq\qq.css" />
+    <Content Include="NoticeModular\Kindeditor\themes\simple\simple.css" />
+    <Content Include="js\language\ar_MA.js" />
+    <Content Include="js\language\be_FR.js" />
+    <Content Include="js\language\be_NL.js" />
+    <Content Include="js\language\bg_BG.js" />
+    <Content Include="js\language\cs_CZ.js" />
+    <Content Include="js\language\da_DK.js" />
+    <Content Include="js\language\de_DE.js" />
+    <Content Include="js\language\en_US.js" />
+    <Content Include="js\language\es_CL.js" />
+    <Content Include="js\language\es_ES.js" />
+    <Content Include="js\language\fa_IR.js" />
+    <Content Include="js\language\fr_FR.js" />
+    <Content Include="js\language\gr_EL.js" />
+    <Content Include="js\language\he_IL.js" />
+    <Content Include="js\language\hu_HU.js" />
+    <Content Include="js\language\id_ID.js" />
+    <Content Include="js\language\it_IT.js" />
+    <Content Include="js\language\ja_JP.js" />
+    <Content Include="js\language\nl_NL.js" />
+    <Content Include="js\language\no_NO.js" />
+    <Content Include="js\language\pl_PL.js" />
+    <Content Include="js\language\pt_BR.js" />
+    <Content Include="js\language\pt_PT.js" />
+    <Content Include="js\language\ro_RO.js" />
+    <Content Include="js\language\ru_RU.js" />
+    <Content Include="js\language\sq_AL.js" />
+    <Content Include="js\language\sr_RS.js" />
+    <Content Include="js\language\sv_SE.js" />
+    <Content Include="js\language\th_TH.js" />
+    <Content Include="js\language\tr_TR.js" />
+    <Content Include="js\language\ua_UA.js" />
+    <Content Include="js\language\vi_VN.js" />
+    <Content Include="js\language\zh_CN.js" />
+    <Content Include="js\language\zh_TW.js" />
+    <Content Include="js\login.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="js\fileinput\piexif.min.js" />
+    <Content Include="js\default.js" />
+    <Content Include="js\register.js" />
+    <Content Include="AscxModular\Header.ascx" />
+    <Content Include="LitJson\LitJSON.csproj" />
+    <Content Include="LitJson\litjson.png" />
+    <Content Include="NoticeModular\NoticeChange.aspx" />
+    <Content Include="NoticeModular\NoticeManage.aspx" />
+    <Content Include="NoticeModular\ReadNotice.aspx" />
+    <Content Include="SlideToUnlock\css\verify.css" />
+    <Content Include="SlideToUnlock\upload\1.jpg" />
+    <Content Include="SlideToUnlock\upload\2.jpg" />
+    <Content Include="SlideToUnlock\upload\3.jpg" />
+    <Content Include="SlideToUnlock\SlideToUnlockDemo.html" />
+    <Content Include="SlideToUnlock\js\demo.js" />
+    <Content Include="SlideToUnlock\js\jquery.min.js" />
+    <Content Include="SlideToUnlock\js\verify.js" />
+    <Content Include="TaskModular\TaskManage.aspx" />
+    <Content Include="unlock_images\1.jpg" />
+    <Content Include="UserModular\Login.aspx" />
+    <Content Include="UserModular\Register.aspx" />
+    <Content Include="UserModular\UserChange.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AscxModular\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AscxModular\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TaskModular\TaskRead.aspx.cs">
+      <DependentUpon>TaskRead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TaskModular\TaskRead.aspx.designer.cs">
+      <DependentUpon>TaskRead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TaskModular\TaskChange.aspx.cs">
+      <DependentUpon>TaskChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TaskModular\TaskChange.aspx.designer.cs">
+      <DependentUpon>TaskChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControlModular\CalendarManage.aspx.cs">
+      <DependentUpon>CalendarManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControlModular\CalendarManage.aspx.designer.cs">
+      <DependentUpon>CalendarManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControlModular\CarouselManage.aspx.cs">
+      <DependentUpon>CarouselManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControlModular\CarouselManage.aspx.designer.cs">
+      <DependentUpon>CarouselManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommentModular\CommentDelete.aspx.cs">
+      <DependentUpon>CommentDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommentModular\CommentDelete.aspx.designer.cs">
+      <DependentUpon>CommentDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AscxModular\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AscxModular\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LitJson\IJsonWrapper.cs" />
+    <Compile Include="LitJson\JsonData.cs" />
+    <Compile Include="LitJson\JsonException.cs" />
+    <Compile Include="LitJson\JsonMapper.cs" />
+    <Compile Include="LitJson\JsonMockWrapper.cs" />
+    <Compile Include="LitJson\JsonReader.cs" />
+    <Compile Include="LitJson\JsonWriter.cs" />
+    <Compile Include="LitJson\Lexer.cs" />
+    <Compile Include="LitJson\Netstandard15Polyfill.cs" />
+    <Compile Include="LitJson\ParserToken.cs" />
+    <Compile Include="NoticeModular\NoticeChange.aspx.cs">
+      <DependentUpon>NoticeChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoticeModular\NoticeChange.aspx.designer.cs">
+      <DependentUpon>NoticeChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeModular\NoticeManage.aspx.cs">
+      <DependentUpon>NoticeManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoticeModular\NoticeManage.aspx.designer.cs">
+      <DependentUpon>NoticeManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeModular\ReadNotice.aspx.cs">
+      <DependentUpon>ReadNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoticeModular\ReadNotice.aspx.designer.cs">
+      <DependentUpon>ReadNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SlideToUnlock\application\CaptchaHelper.cs" />
+    <Compile Include="SlideToUnlock\application\ImageHelper.cs" />
+    <Compile Include="SlideToUnlock\application\ImageInfo.cs" />
+    <Compile Include="SlideToUnlock\SlideToUnlock.ashx.cs">
+      <DependentUpon>SlideToUnlock.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="TaskModular\TaskManage.aspx.cs">
+      <DependentUpon>TaskManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TaskModular\TaskManage.aspx.designer.cs">
+      <DependentUpon>TaskManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserModular\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserModular\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserModular\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserModular\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserModular\UserChange.aspx.cs">
+      <DependentUpon>UserChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserModular\UserChange.aspx.designer.cs">
+      <DependentUpon>UserChange.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="css\bootstrap-theme.css.map" />
+    <None Include="css\bootstrap-theme.min.css.map" />
+    <None Include="css\bootstrap.css.map" />
+    <None Include="css\bootstrap.min.css.map" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="SlideToUnlock\SlideToUnlock.ashx" />
+    <Content Include="SlideToUnlock\Web.config" />
+    <None Include="js\datetimepicker-master\.gitignore" />
+    <None Include="js\datetimepicker-master\.travis.yml" />
+    <None Include="js\datetimepicker-master\bower.json" />
+    <None Include="js\datetimepicker-master\datetimepicker.jquery.json" />
+    <None Include="js\datetimepicker-master\doc.tpl" />
+    <None Include="js\datetimepicker-master\package-lock.json" />
+    <None Include="js\datetimepicker-master\package.json" />
+    <None Include="js\datetimepicker-master\pull_request_template.md" />
+    <None Include="js\datetimepicker-master\README.md" />
+    <None Include="LitJson\AssemblyInfo.cs.in" />
+    <Content Include="NoticeModular\Kindeditor\file_manager_json.ashx" />
+    <Content Include="NoticeModular\Kindeditor\upload_json.ashx" />
+    <Content Include="TaskModular\Kindeditor\file_manager_json.ashx" />
+    <Content Include="TaskModular\Kindeditor\upload_json.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{D785573A-7A71-43B3-AB97-59A227B95169}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{3AB8D3B5-987C-4F5E-A2AC-EB9F2889FE28}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SlideToUnlock\bin\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>12345</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
